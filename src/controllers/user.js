@@ -12,6 +12,7 @@ module.exports = {
             }
             // Save to DB
             // TODO check if user already exists
+        // Test
         client.hmget(user.username, (err, res) => {
             if (!res) {
                 client.hmset(user.username, userObj, (err, res) => {
